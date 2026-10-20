@@ -454,7 +454,9 @@ footer{padding:64px 0 32px;background:var(--ice);margin-top:0;border-top:1px sol
   .form{padding:20px}
   .seg button{font-size:12px}
   .dark,.booking{margin:0;border-radius:28px}
-  .facts{gap:14px 26px;font-size:14px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:14px;line-height:1.3}
+  .facts span{background:var(--sky-soft);border-radius:18px;padding:14px 14px 16px}
+  .facts b{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:22px;line-height:1.05;margin-bottom:4px}
   .ph-img img,.ph-collage{height:300px}
   .g6{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
   .g2{grid-template-columns:1fr;grid-auto-rows:260px}
