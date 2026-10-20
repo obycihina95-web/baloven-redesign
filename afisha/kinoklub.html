@@ -35,9 +35,9 @@
         <h1 class="display">С Анной Ревенок по методу синемологии</h1>
         <p class="lead-dark">Новый взгляд на привычные фильмы и осознанный просмотр. Хорошее кино обладает удивительной способностью «вскрывать» законсервированные эмоции, позволяя увидеть на экране то, что происходит в нашей жизни.</p>
         <div class="kv4"><div><small>Когда</small><b>Раз в две недели, по средам</b></div><div><small>Начало</small><b>19:30</b></div><div><small>Ведущая</small><b>Анна Ревенок</b></div><div><small>Билеты</small><b>У организатора</b></div></div>
-        <div class="next-box">
-          <div><small>Ближайший вечер</small><b>21 октября, ср · 19:30</b><span>Киноклуб с Анной Ревенок</span></div>
-          <div class="nb-act"><a class="btn btn-primary" href="#билеты-у-организатора" target="_blank" rel="noopener">Купить билет ↗</a><a class="btn btn-ghost" href="../booking.html?type=event&amp;event=kn-1021">Забронировать стол</a></div>
+        <div class="next-box" data-next-box="kinoklub">
+          <div><small>Ближайший вечер</small><b data-nb="date">Скоро в афише</b><span data-nb="title">Анонс придёт в Telegram @CafeBaloven</span></div>
+          <div class="nb-act"><a class="btn btn-primary" data-nb="more" href="#dates">Подробнее</a><a class="btn btn-ghost" data-nb="book" href="../booking.html?type=event">Забронировать стол</a></div>
         </div>
       </div>
       <div class="cat-hero-img"><img src="https://thb.tildacdn.com/tild6134-3964-4637-a234-376133323438/-/resize/1000x/IMG_1244.JPG" alt="Киноклуб"></div>
@@ -67,28 +67,8 @@
   <div class="venue-i"><span class="venue-k k2">Столик</span><div><b>У нас, в Баловне</b><p>Мы — площадка. Чтобы во время события у вас было место в зале и ужин, забронируйте столик.</p></div></div>
   <a class="btn btn-primary" href="../booking.html?type=event">Забронировать стол</a>
 </div>
-    <div class="list"><div class="ev c-sky" data-cat="kinoklub">
-  <div class="date"><b>21</b><span>окт · ср</span></div>
-  <div class="ev-body"><span class="t">Киноклуб</span><span class="tm">19:30</span><h4>Киноклуб с Анной Ревенок</h4><div class="sub">Просмотр и разбор по методу синемологии</div><div class="org">Проводит: Анна Ревенок</div></div>
-  <div class="ev-act">
-    <a class="btn btn-sm btn-primary" href="#билеты-у-организатора" target="_blank" rel="noopener">Купить билет ↗</a>
-    <a class="btn btn-sm btn-ghost" href="../booking.html?type=event&amp;event=kn-1021">Забронировать стол</a>
-  </div>
-</div><div class="ev c-sky" data-cat="kinoklub">
-  <div class="date"><b>4</b><span>ноя · ср</span></div>
-  <div class="ev-body"><span class="t">Киноклуб</span><span class="tm">19:30</span><h4>Киноклуб: кино о выборе</h4><div class="sub">Фильм и обсуждение в кругу</div><div class="org">Проводит: Анна Ревенок</div></div>
-  <div class="ev-act">
-    <a class="btn btn-sm btn-primary" href="#билеты-у-организатора" target="_blank" rel="noopener">Купить билет ↗</a>
-    <a class="btn btn-sm btn-ghost" href="../booking.html?type=event&amp;event=kn-1104">Забронировать стол</a>
-  </div>
-</div><div class="ev c-sky" data-cat="kinoklub">
-  <div class="date"><b>18</b><span>ноя · ср</span></div>
-  <div class="ev-body"><span class="t">Киноклуб</span><span class="tm">19:30</span><h4>Киноклуб с Анной Ревенок</h4><div class="sub">Осознанный просмотр и инсайты</div><div class="org">Проводит: Анна Ревенок</div></div>
-  <div class="ev-act">
-    <a class="btn btn-sm btn-primary" href="#билеты-у-организатора" target="_blank" rel="noopener">Купить билет ↗</a>
-    <a class="btn btn-sm btn-ghost" href="../booking.html?type=event&amp;event=kn-1118">Забронировать стол</a>
-  </div>
-</div></div>
+    <div class="list" data-upcoming data-limit="0"><div class="ev-none">Ближайших дат пока нет — организаторы ещё не прислали анонс. Следите за Telegram <a href="https://t.me/CafeBaloven">@CafeBaloven</a>.</div></div>
+    
     <div class="tg"><span><b>Не подходит дата?</b> Подпишитесь на Telegram — пришлём анонс следующего вечера.</span><a class="btn btn-ghost" href="https://t.me/CafeBaloven">@CafeBaloven</a></div>
   </div>
 </section>
@@ -116,7 +96,7 @@
     <span class="badge">По пятницам</span>
     <h3>Театральные ужины</h3>
     <p>Когда гастрономия встречается с искусством</p>
-    <div class="fcard-meta"><span>Ближайший: 16 октября</span></div>
+    <div class="fcard-meta"><span data-next="teatr" data-next-fmt="card">Даты — в афише</span></div>
   </div>
 </a><a class="fcard c-orange" href="../afisha/kvartirniki.html">
   <img src="https://thb.tildacdn.com/tild6363-3466-4363-a366-343632353830/-/resize/700x/WhatsApp_Image_2025-.jpeg" alt="Квартирники" loading="lazy">
@@ -124,7 +104,7 @@
     <span class="badge">Каждое воскресенье</span>
     <h3>Квартирники</h3>
     <p>Поём вместе любимые песни с музыкантами</p>
-    <div class="fcard-meta"><span>Ближайший: 11 октября</span></div>
+    <div class="fcard-meta"><span data-next="kvartirniki" data-next-fmt="card">Даты — в афише</span></div>
   </div>
 </a><a class="fcard c-peach" href="../afisha/vecherinki.html">
   <img src="https://thb.tildacdn.com/tild3634-6238-4833-b935-656637646139/-/resize/700x/5296274217840089063_.jpg" alt="Вечеринки и мастер-классы" loading="lazy">
@@ -132,14 +112,14 @@
     <span class="badge">По анонсу</span>
     <h3>Вечеринки и мастер-классы</h3>
     <p>Дегустации, мастер-классы и тематические вечера</p>
-    <div class="fcard-meta"><span>Ближайший: 24 октября</span></div>
+    <div class="fcard-meta"><span data-next="vecherinki" data-next-fmt="card">Даты — в афише</span></div>
   </div>
 </a></div>
   </div>
 </section>
 <section class="cta-band"><div class="wrap"><div class="cta-in">
-  <div><h2 class="display">Столик на вечер</h2><p>Билет — у организатора, место в зале — у нас. Ближайший вечер — 21 октября, зал камерный.</p></div>
-  <div class="cta-actions"><a class="btn btn-light" href="../booking.html?type=event&event=kn-1021">Забронировать стол</a><a class="cta-phone" href="tel:+74992357367">+7 499 235 73 67</a></div>
+  <div><h2 class="display">Столик на вечер</h2><p>Билет — у организатора, место в зале — у нас. Зал камерный, на популярные даты лучше бронировать заранее.</p></div>
+  <div class="cta-actions"><a class="btn btn-light" href="../booking.html?type=event">Забронировать стол</a><a class="cta-phone" href="tel:+74992357367">+7 499 235 73 67</a></div>
 </div></div></section>
 
 </main>

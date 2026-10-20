@@ -16,6 +16,44 @@
     if (!open) $('[data-open-dot]')?.classList.add('closed');
   }
 
+  // афиша по датам: прошедшие вечера скрываются сами (для показа можно открыть с ?today=2026-11-01)
+  const TODAY = new URLSearchParams(location.search).get('today') || new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Moscow' }).format(new Date());
+  const isPast = d => d < TODAY;
+  const MON = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  const WDS = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+  const fmt = (d, short) => { const [y, m, dd] = d.split('-').map(Number); return dd + ' ' + (short ? MON[m - 1].slice(0, 3) : MON[m - 1]) + (short ? '' : ', ' + WDS[new Date(y, m - 1, dd).getDay()]); };
+  $$('.ev[data-date]').forEach(e => e.classList.toggle('past', isPast(e.dataset.date)));
+  $$('[data-upcoming]').forEach(l => {
+    const lim = +l.dataset.limit || Infinity;
+    let n = 0;
+    $$('.ev', l).forEach(e => { const show = !e.classList.contains('past') && n < lim; e.classList.toggle('off', !show); if (show) n++; });
+    l.classList.toggle('none', !n);
+  });
+  $$('[data-past-list]').forEach(l => {
+    let n = 0;
+    $$('.ev', l).forEach(e => { const p = e.classList.contains('past'); e.classList.toggle('off', !p); if (p) n++; });
+    l.closest('[data-past-sec]').classList.toggle('off', !n);
+  });
+  const EVS = (window.BALOVEN_EVENTS || []).filter(e => !isPast(e.date));
+  const ROOTP = document.body.dataset.root || '';
+  $$('[data-next]').forEach(el => {
+    const k = el.dataset.next, e = EVS.find(x => k === 'all' || x.cat === k);
+    if (!e) { el.textContent = 'Анонс скоро'; return; }
+    el.textContent = el.dataset.nextFmt === 'door' ? 'Ближайшее: ' + fmt(e.date, true) + ' · ' + e.badge : 'Ближайший: ' + fmt(e.date);
+  });
+  $$('[data-count]').forEach(el => { const n = EVS.filter(x => x.cat === el.dataset.count).length; el.textContent = n ? n + ' в афише' : ''; el.style.display = n ? '' : 'none'; });
+  $$('[data-next-box]').forEach(b => {
+    const e = EVS.find(x => x.cat === b.dataset.nextBox);
+    if (!e) { $('[data-nb="more"]', b).style.display = 'none'; return; }
+    $('[data-nb="date"]', b).textContent = fmt(e.date) + ' · ' + e.time;
+    $('[data-nb="title"]', b).textContent = e.title;
+    $('[data-nb="more"]', b).href = ROOTP + 'afisha/' + e.id + '.html';
+    $('[data-nb="book"]', b).href = ROOTP + 'booking.html?type=event&event=' + e.id;
+  });
+  const evPage = $('[data-event-page]');
+  if (evPage && isPast(evPage.dataset.eventPage)) document.body.classList.add('ev-is-past');
+  $$('option[data-date]').forEach(o => { if (isPast(o.dataset.date)) o.remove(); });
+
   // фильтр афиши
   const filters = $('[data-filters]');
   if (filters) {
@@ -24,12 +62,13 @@
       let total = 0;
       $$('[data-month]').forEach(m => {
         let n = 0;
-        $$('.ev', m).forEach(e => { const ok = f === 'all' || e.dataset.cat === f; e.classList.toggle('hide', !ok); if (ok) n++; });
+        $$('.ev', m).forEach(e => { const ok = !e.classList.contains('past') && (f === 'all' || e.dataset.cat === f); e.classList.toggle('hide', !ok); if (ok) n++; });
         m.classList.toggle('hide', !n); total += n;
       });
       $('[data-empty]').style.display = total ? 'none' : 'block';
     };
     $$('.chip', filters).forEach(c => c.addEventListener('click', () => apply(c.dataset.f)));
+    apply('all');
   }
 
   // вкладки меню (+ переход по #breakfast / #lunch)
@@ -103,7 +142,8 @@
   const norm = (s) => s.toLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9\s-]/g, ' ').replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
   const stem = (w) => (w.length > 4 ? w.replace(/(ами|ями|ого|его|ому|ему|ыми|ими|ах|ях|ов|ев|ей|ой|ий|ый|ая|яя|ое|ее|ую|юю|ам|ям|ом|ем|ы|и|а|я|е|у|ю|о|ь)$/, '') : w);
   const STOP = new Set('я мы вы хочу хотим хотелось хотелось бы бы мне нам нас у в во на с со к ко по за для и или а но что как где когда какой какая какие есть ли можно нужно надо пожалуйста покажи покажите найди найдите подскажи подскажите посоветуй есть это там тут вас у вас ваш ваше ваши сегодня завтра чтобы чем ну вот еще ещё очень что-нибудь какое-нибудь'.split(' '));
-  const prepared = INDEX.map((r) => ({ r, title: norm(r.t), body: norm(r.t + ' ' + r.d + ' ' + r.k) }));
+  const TODAY_S = new URLSearchParams(location.search).get('today') || new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Moscow' }).format(new Date());
+  const prepared = INDEX.filter((r) => !r.x || r.x >= TODAY_S).map((r) => ({ r, title: norm(r.t), body: norm(r.t + ' ' + r.d + ' ' + r.k) }));
 
   function search(q) {
     const words = norm(q).split(' ').filter((w) => w && !STOP.has(w)).map(stem);
