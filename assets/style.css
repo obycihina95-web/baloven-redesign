@@ -72,8 +72,8 @@ nav.main>a:hover,.dd>a:hover{border-bottom-color:rgba(255,255,255,.6)}
 .ph-grid h1{font-size:clamp(44px,6.5vw,88px);margin:12px 0 18px}
 .lead-dark{font-size:19px;color:var(--grey);max-width:560px}
 .ph-img img{width:100%;height:440px;object-fit:cover;border-radius:var(--radius)}
-.ph-collage{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:440px}
-.ph-collage img{width:100%;height:100%;object-fit:cover;border-radius:22px}
+.ph-collage{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;height:440px}
+.ph-collage img{width:100%;height:100%;min-height:0;object-fit:cover;border-radius:22px}
 .ph-collage img:first-child{grid-row:span 2}
 .hours-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .hours-row a{padding:14px 18px;border-radius:18px;background:var(--ice);border:1px solid var(--line);display:flex;flex-direction:column;transition:.2s}
@@ -560,3 +560,5 @@ footer{padding:64px 0 32px;background:var(--ice);margin-top:0;border-top:1px sol
   .past-list .ev{grid-template-columns:76px 1fr}
   .evp-text{font-size:16px}
 }
+nav.main a,.bar .phone{white-space:nowrap}
+@media (max-width:1180px){ .bar .phone{display:none} nav.main{gap:20px} }
