@@ -96,27 +96,6 @@
     $$('.mcat').forEach(s => io.observe(s));
   }
 
-  // телефон: разделы меню плитками, внутри раздела — «← Все разделы»
-  const mm = $('.menu-main');
-  if (mm) {
-    const phone = matchMedia('(max-width:1000px)');
-    const route = () => {
-      const h = location.hash.slice(1);
-      const cat = /^m\d+$/.test(h) && $('#' + h);
-      $$('.mcat', mm).forEach(c => c.classList.toggle('on', c === cat));
-      mm.classList.toggle('cat-open', !!cat);
-      if (phone.matches && (cat || h === 'main')) {
-        if (cat && !$('#main').classList.contains('on')) $('[data-tab="main"]')?.click();
-        const top = $('[data-tabs]').getBoundingClientRect().top + scrollY - 80;
-        scrollTo(0, top);
-      }
-    };
-    $$('[data-cat-open]', mm).forEach(a => a.addEventListener('click', e => { if (!phone.matches) return; e.preventDefault(); history.pushState(null, '', '#' + a.dataset.catOpen); route(); }));
-    $$('[data-cat-back]', mm).forEach(a => a.addEventListener('click', e => { if (!phone.matches) return; e.preventDefault(); history.pushState(null, '', '#main'); route(); }));
-    addEventListener('popstate', route);
-    route();
-  }
-
   // дни недели в ланче, сегодняшний — по умолчанию
   $$('[data-week]').forEach(w => {
     const btns = $$('.wd', w), panes = $$('.wd-pane', w);
