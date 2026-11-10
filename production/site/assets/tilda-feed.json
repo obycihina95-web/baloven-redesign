@@ -1,0 +1,165 @@
+{
+  "feeduid": "832048692431",
+  "feedtitle": "Афиша",
+  "feedtz": "Asia/Novosibirsk",
+  "parts": [
+    {
+      "uid": "553924136101",
+      "title": "Театральные ужины",
+      "recordid": 0,
+      "sort": 100
+    },
+    {
+      "uid": "893450392481",
+      "title": "Другие мероприятия",
+      "recordid": 0,
+      "sort": 200
+    },
+    {
+      "uid": "948029685681",
+      "title": "Вечеринки",
+      "recordid": 0,
+      "sort": 300
+    },
+    {
+      "uid": "672238588891",
+      "title": "Киноклуб",
+      "recordid": 0,
+      "sort": 400
+    },
+    {
+      "uid": "826556629041",
+      "title": "Квартирники",
+      "recordid": 0,
+      "sort": 500
+    }
+  ],
+  "posts": [
+    {
+      "uid": "6pk3vdpev1",
+      "parts": "Квартирники",
+      "directlink": "",
+      "directtarget": "",
+      "date": "2026-10-14 19:30",
+      "published": "2026-10-08 08:33:01",
+      "url": "https://cafe-baloven.com/tpost/6pk3vdpev1-osennii-vaib-muzikalnii-kvartirnik",
+      "postparts": [
+        {
+          "partuid": "826556629041",
+          "parttitle": "Квартирники",
+          "parturl": "https://cafe-baloven.com#!/tfeeds/832048692431/c/Квартирники"
+        }
+      ],
+      "title": "Осенний вайб. Музыкальный квартирник",
+      "descr": "Тёплый вечер с живой музыкой, душевными текстами и вкусными блюдами.",
+      "text": "",
+      "mediatype": "image",
+      "mediadata": "https://static.tildacdn.com/tild6232-3037-4837-a262-623732303161/IMG_20261008_123103.jpg",
+      "image": "https://static.tildacdn.com/tild6232-3037-4837-a262-623732303161/IMG_20261008_123103.jpg",
+      "imagealt": "",
+      "thumb": "",
+      "thumbalt": ""
+    },
+    {
+      "uid": "36cvl5p9f1",
+      "parts": "Театральные ужины",
+      "directlink": "",
+      "directtarget": "",
+      "date": "2026-11-04 19:00",
+      "published": "2026-11-02 06:49:47",
+      "url": "https://cafe-baloven.com/tpost/36cvl5p9f1-teatralnii-uzhin-kamennii-gost",
+      "postparts": [
+        {
+          "partuid": "553924136101",
+          "parttitle": "Театральные ужины",
+          "parturl": "https://cafe-baloven.com#!/tfeeds/832048692431/c/Театральные ужины"
+        }
+      ],
+      "title": "Театральный ужин «Каменный гость».",
+      "descr": "День Народного Единства. Король русского юмора - АРКАДИЙ АВЕРЧЕНКО! (моноспектакль)",
+      "text": "",
+      "mediatype": "image",
+      "mediadata": "https://static.tildacdn.com/tila3239-3535-4166-a239-393261636536/IMG_20261102_104428.jpg",
+      "image": "https://static.tildacdn.com/tila3239-3535-4166-a239-393261636536/IMG_20261102_104428.jpg",
+      "imagealt": "",
+      "thumb": "",
+      "thumbalt": ""
+    },
+    {
+      "uid": "blmumy48l1",
+      "parts": "Театральные ужины",
+      "directlink": "",
+      "directtarget": "",
+      "date": "2026-11-12 20:00",
+      "published": "2026-11-02 06:47:00",
+      "url": "https://cafe-baloven.com/tpost/blmumy48l1-viva-ispaniya-ispanskii-vecher-versiya-f",
+      "postparts": [
+        {
+          "partuid": "553924136101",
+          "parttitle": "Театральные ужины",
+          "parturl": "https://cafe-baloven.com#!/tfeeds/832048692431/c/Театральные ужины"
+        }
+      ],
+      "title": "Вива Испания! Испанский вечер, версия Фламенко",
+      "descr": "Когда гаснет свет, оживают улицы Барселоны, Мадрида и Севильи: шепот страстных признаний, звон бокалов, песни, шуршание юбок в ритме севильяны - все это создает волшебство, которое нужно почувствовать всем сердцем.",
+      "text": "",
+      "mediatype": "image",
+      "mediadata": "https://static.tildacdn.com/tila3139-3838-4237-b830-303766366136/IMG_20261102_104423.jpg",
+      "image": "https://static.tildacdn.com/tila3139-3838-4237-b830-303766366136/IMG_20261102_104423.jpg",
+      "imagealt": "",
+      "thumb": "",
+      "thumbalt": ""
+    },
+    {
+      "uid": "yh81rb5th1",
+      "parts": "Квартирники",
+      "directlink": "",
+      "directtarget": "",
+      "date": "2026-11-19 20:00",
+      "published": "2026-11-02 06:47:46",
+      "url": "https://cafe-baloven.com/tpost/yh81rb5th1-osennii-vaib-muzikalnii-kvartirnik",
+      "postparts": [
+        {
+          "partuid": "826556629041",
+          "parttitle": "Квартирники",
+          "parturl": "https://cafe-baloven.com#!/tfeeds/832048692431/c/Квартирники"
+        }
+      ],
+      "title": "Осенний вайб. Музыкальный квартирник",
+      "descr": "Тёплый вечер с живой музыкой, душевными текстами и вкусными блюдами.",
+      "text": "",
+      "mediatype": "image",
+      "mediadata": "https://static.tildacdn.com/tila6433-6433-4463-a562-656432656630/IMG_20261102_104425.jpg",
+      "image": "https://static.tildacdn.com/tila6433-6433-4463-a562-656432656630/IMG_20261102_104425.jpg",
+      "imagealt": "",
+      "thumb": "",
+      "thumbalt": ""
+    },
+    {
+      "uid": "hhj3p7sbz1",
+      "parts": "Театральные ужины",
+      "directlink": "",
+      "directtarget": "",
+      "date": "2026-11-26 20:00",
+      "published": "2026-11-02 06:44:58",
+      "url": "https://cafe-baloven.com/tpost/hhj3p7sbz1-odnazhdi-v-parizhe",
+      "postparts": [
+        {
+          "partuid": "553924136101",
+          "parttitle": "Театральные ужины",
+          "parturl": "https://cafe-baloven.com#!/tfeeds/832048692431/c/Театральные ужины"
+        }
+      ],
+      "title": "Однажды в Париже",
+      "descr": "Атмосфера Франции, живой аккордеон, истории о жизни<br />\nфранцузов и уличный весельчак - мим...<br />\n<br />Необычный вечер перенесёт на пару часов во Францию.<br />\n",
+      "text": "",
+      "mediatype": "image",
+      "mediadata": "https://static.tildacdn.com/tila6238-3635-4363-b835-653562613365/IMG_20261102_104418.jpg",
+      "image": "https://static.tildacdn.com/tila6238-3635-4363-b835-653562613365/IMG_20261102_104418.jpg",
+      "imagealt": "",
+      "thumb": "",
+      "thumbalt": ""
+    }
+  ],
+  "total": 5
+}

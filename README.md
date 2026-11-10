@@ -1,5 +1,7 @@
 # Арт-кафе «Баловень» — редизайн сайта
 
+**Рабочая версия на GitHub Pages:** https://obycihina95-web.github.io/baloven-redesign/. Исходная выгрузка с Tilda и порядок её обновления — в [production](production/README.md). Ниже описан исходный портфолийный проект.
+
 **Ссылка:** https://baloven-redesign.netlify.app
 **Макет в Figma:** https://www.figma.com/design/KvwmtBbGA1bshiiiLM4Lrr (команда «Материалы для работы»: главная, меню, банкеты, афиша, квартирники — десктоп 1440 + мобайл 375, дизайн-система с компонентами)
 **Дата:** октябрь 2026
