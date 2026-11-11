@@ -238,6 +238,7 @@ def page(fname, title, desc, active, body, depth=0):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>{title}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="stylesheet" href="https://static.tildacdn.com/css/fonts-tildasans.css">
